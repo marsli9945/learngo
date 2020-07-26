@@ -7,7 +7,6 @@ import (
 
 /**
 扩展类型有两种方式
-定义别名
 使用组合
 */
 type myTreeNode struct {

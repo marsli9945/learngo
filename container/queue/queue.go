@@ -1,5 +1,9 @@
 package queue
 
+/**
+扩展类型有两种方式
+定义别名
+*/
 type Queue []int
 
 func (q *Queue) Push(v int) {

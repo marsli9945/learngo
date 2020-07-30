@@ -3,8 +3,10 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strconv"
+	"strings"
 )
 
 /**
@@ -35,7 +37,11 @@ func printFile(filename string) {
 		panic(err)
 	}
 
-	scanner := bufio.NewScanner(file)
+	printFileContents(file)
+}
+
+func printFileContents(reader io.Reader) {
+	scanner := bufio.NewScanner(reader)
 	for scanner.Scan() {
 		fmt.Println(scanner.Text())
 	}
@@ -65,5 +71,14 @@ func main() {
 	)
 
 	printFile("abc.txt")
-	forever()
+	//forever()
+
+	s := `
+<html>
+	<body>
+		<span>html file print</span>
+	</body>
+</html>
+`
+	printFileContents(strings.NewReader(s))
 }

@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-/**
+/*
+*
 array是值类型
 */
 func printArray(arr [5]int) {
@@ -12,7 +13,8 @@ func printArray(arr [5]int) {
 	}
 }
 
-/**
+/*
+*
 通过传递数组指针改变元素
 */
 func printArrayPointer(arr *[5]int) {
@@ -28,7 +30,7 @@ func main() {
 	arr3 := [...]int{2, 4, 6, 8, 10} //可变长数组
 	fmt.Println(arr1, arr2, arr3)
 
-	// 而为数组
+	// 二维数组
 	var grid [4][5]int
 	fmt.Println(grid)
 
